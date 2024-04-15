@@ -6,7 +6,7 @@ import EstateCards from "./EstateCards";
 const Home = () => {
 
     const estates = useLoaderData();
-    console.log(estates)
+
     return (
         <div>
             <h2 className="text-3xl font-montserrat">This is Home</h2>

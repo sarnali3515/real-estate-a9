@@ -37,7 +37,7 @@ const EstateCards = ({ estate }) => {
                     description.length > 80 ?
                         <p>{description.slice(0, 80)} <Link
                             className="text-blue-600 font-bold"
-                            to={`/news/${id}`}
+                            to={`/estate/${id}`}
                         >Read More...</Link></p>
                         :
                         <p>{description}</p>
@@ -62,7 +62,7 @@ const EstateCards = ({ estate }) => {
                     <div className="badge badge-outline">Fashion</div>
                     <div className="badge badge-outline">Products</div>
                 </div> */}
-                <button className="btn text-white bg-lime-600">View Property</button>
+                <Link className="btn text-white bg-lime-600" to={`/estate/${id}`}><button >View Property</button></Link>
             </div>
         </div>
     );
