@@ -8,14 +8,13 @@ import { IoMdCheckmark } from "react-icons/io";
 
 const EstateCards = ({ estate }) => {
 
-    const { id, estate_title, image_url, segment_name, status, description, area, location, facilities } = estate;
+    const { id, estate_title, image_url, segment_name, status, description, area, location, facilities, price } = estate;
 
     return (
         <div className="card bg-indigo-50 shadow-xl">
-            <figure ><img src={image_url} alt="Shoes" /></figure>
-            <div className="flex justify-between">
-                <div className="badge text-xl p-3 text-white bg-indigo-800">{segment_name}</div>
-                <div>
+            <figure className="relative">
+                <div className="absolute bottom-0 left-0 font-extrabold text-xl text-black rounded-t-xl px-1 bg-indigo-50">{price}</div>
+                <div className="absolute bottom-2 right-2">
                     {
                         status == 'sale' ?
                             <div className="badge text-xl p-3 text-white bg-red-700">Sale</div>
@@ -23,7 +22,11 @@ const EstateCards = ({ estate }) => {
                             <div className="badge text-xl p-3 text-white bg-lime-600">Rent</div>
                     }
                 </div>
-            </div>
+                <img src={image_url} alt="Shoes" /></figure>
+
+            <div className="badge text-xl p-3 text-white bg-indigo-800">{segment_name}</div>
+
+
             <div className="card-body">
                 <h2 className="card-title">
                     {estate_title}
