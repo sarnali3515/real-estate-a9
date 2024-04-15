@@ -1,10 +1,27 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { FaGoogle, FaGithub } from "react-icons/fa";
+import { GoogleAuthProvider } from "firebase/auth";
 
 const Login = () => {
 
-    const { signIn } = useContext(AuthContext);
+    const { signIn, googlePopup } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const googleProvider = new GoogleAuthProvider();
+
+    const handleGoogleLogIn = () => {
+        googlePopup(googleProvider)
+            .then(result => {
+                console.log(result);
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
 
     const handleLogin = e => {
         e.preventDefault();
@@ -16,7 +33,8 @@ const Login = () => {
 
         signIn(email, password)
             .then(result => {
-                console.log(result.user)
+                console.log(result.user);
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.error(error)
@@ -26,8 +44,8 @@ const Login = () => {
         <div className="hero min-h-screen bg-base-200" style={{ backgroundImage: 'url(https://i.ibb.co/z8s2rD7/gus-ruballo-h5-QNcl-JUi-A8-unsplash.jpg)' }}>
             <div className="hero-content flex-col lg:flex-row hero-overlay bg-opacity-50">
                 <div className="text-center lg:m-8 lg:text-left">
-                    <h1 className="text-5xl font-semibold text-indigo-800 btn-ghost ">Urban <span className="text-lime-600">Charm</span></h1>
-                    <h1 className="text-3xl font-semibold text-white mt-5">Welcome to Urban Charm!</h1>
+                    <h1 className="text-3xl md:text-5xl font-semibold text-indigo-800 btn-ghost ">Urban <span className="text-lime-600">Charm</span></h1>
+                    <h1 className="text-2xl md:text-3xl font-semibold text-white mt-5">Welcome to Urban Charm!</h1>
                     <p className="py-6 lg:pr-8 text-white">Unlock your dream home with just a click - log in to explore exclusive listings and personalized recommendations.</p>
                 </div>
                 <div className="card w-full  shadow-2xl bg-indigo-100">
@@ -53,6 +71,22 @@ const Login = () => {
                             <button className="btn btn-primary">Login</button>
                         </div>
                     </form>
+
+                    <div className="flex items-center justify-center px-8 pb-3">
+                        <div className="flex-grow border-t border-gray-400"></div>
+                        <div className="mx-4 text-gray-500">Or Register with</div>
+                        <div className="flex-grow border-t border-gray-400"></div>
+                    </div>
+                    <div className="flex items-center justify-center gap-5 mb-5 text-xl">
+                        <button onClick={handleGoogleLogIn} className="btn btn-outline bg-red-600 text-white">
+                            <FaGoogle></FaGoogle>
+                            Google
+                        </button>
+                        <button className="btn btn-outline bg-black text-white">
+                            <FaGithub></FaGithub>
+                            GitHub
+                        </button>
+                    </div>
                     <p className="mb-4 text-center">Dont have an account? <Link to="/register" className="text-blue-600 font-semibold">Register.</Link></p>
                 </div>
             </div>

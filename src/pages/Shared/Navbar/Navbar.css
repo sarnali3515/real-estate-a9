@@ -1,0 +1,6 @@
+ul li a.active {
+    background: rgb(156, 173, 248) !important;
+    font-weight: 700;
+    border-radius: 15px;
+    color: rgb(32, 6, 179) !important;
+}
