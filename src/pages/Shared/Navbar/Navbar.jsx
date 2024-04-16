@@ -5,9 +5,14 @@ import './Navbar.css'
 
 const Navbar = () => {
 
-    const { user, logOut } = useContext(AuthContext);
+    const { user, logOut, loading } = useContext(AuthContext);
     console.log(user)
 
+    if (loading) {
+        return <div className="text-center my-4 md:my-6">
+            <span className="loading loading-lg loading-spinner text-success"></span>
+        </div>
+    }
     const handleSignOut = () => {
         logOut()
             .then()
@@ -19,6 +24,7 @@ const Navbar = () => {
             <li className="text-base font-medium"><NavLink to="/">Home</NavLink></li>
             <li className="text-base font-medium"><NavLink to="/upProfile">Update Profile</NavLink></li>
             <li className="text-base font-medium"><NavLink to="/profile">Profile</NavLink></li>
+            <li className="text-base font-medium"><NavLink to="/agents">Our Agents</NavLink></li>
             {
                 !user &&
                 <li className="text-base font-medium"><NavLink to="/register">Register</NavLink></li>
@@ -50,14 +56,13 @@ const Navbar = () => {
             <div className="navbar-end">
                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                     {
-                        user ?
-                            <div className="w-10 rounded-full" >
-                                <img alt="Tailwind CSS Navbar component" src={user.photoURL} title={user.displayName} />
-                            </div> :
-                            <div></div>
+                        user &&
+                        <div className="w-10 rounded-full" >
+                            <img alt="Tailwind CSS Navbar component" src={user.photoURL} title={user.displayName} />
+                        </div>
+
                     }
                 </div>
-
                 {
                     user ?
                         <button onClick={handleSignOut} className="btn text-white bg-lime-600">Logout</button>

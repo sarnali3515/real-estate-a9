@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../../providers/AuthProvider";
-import { updateProfile } from "firebase/auth"; // Import updateProfile method from Firebase authentication
+import { updateProfile } from "firebase/auth";
 import { toast } from "react-toastify";
 
 const UpdateProfile = () => {
@@ -29,7 +29,7 @@ const UpdateProfile = () => {
                 <title>Urban Charm | Update Profile</title>
             </Helmet>
             <div className="hero min-h-screen bg-indigo-50">
-                <div data-aos="fade-right" className="card shrink-0 w-full max-w-lg shadow-2xl bg-indigo-200">
+                <div data-aos="fade-up" className="card shrink-0 w-full max-w-lg shadow-2xl bg-indigo-200">
                     <h1 className="text-3xl text-center px-5 font-bold">Update Profile!</h1>
                     <form className="card-body" onSubmit={handleSaveChanges}>
                         <div className="form-control">

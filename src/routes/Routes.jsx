@@ -8,6 +8,7 @@ import Register from "../pages/Register/Register";
 import Estates from "../pages/Estates/Estates";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Agents from "../pages/Agents/Agents";
 
 const router = createBrowserRouter([
     {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/agents',
+                element: <PrivateRoute><Agents></Agents></PrivateRoute>
             },
 
         ]
