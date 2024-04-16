@@ -6,6 +6,7 @@ import { GithubAuthProvider, GoogleAuthProvider, updateProfile } from "firebase/
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -164,6 +165,9 @@ const Register = () => {
 
             </div>
             <ToastContainer />
+            <Helmet>
+                <title>Urban Charm | Register</title>
+            </Helmet>
         </div>
     );
 };

@@ -6,6 +6,7 @@ import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
 
@@ -70,6 +71,7 @@ const Login = () => {
     }
     return (
         <div className="hero min-h-screen bg-base-200" style={{ backgroundImage: 'url(https://i.ibb.co/z8s2rD7/gus-ruballo-h5-QNcl-JUi-A8-unsplash.jpg)' }}>
+
             <div className="hero-content flex-col lg:flex-row hero-overlay bg-opacity-50">
                 <div className="text-center lg:m-8 lg:text-left">
                     <h1 className="text-3xl md:text-5xl font-semibold text-indigo-800 btn-ghost ">Urban <span className="text-lime-600">Charm</span></h1>
@@ -120,6 +122,9 @@ const Login = () => {
 
             </div>
             <ToastContainer />
+            <Helmet>
+                <title>Urban Charm | Login</title>
+            </Helmet>
         </div>
     );
 };

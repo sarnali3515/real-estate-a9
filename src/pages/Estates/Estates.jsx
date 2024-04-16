@@ -3,6 +3,7 @@ import { MdOutlineDescription, MdOutlineContentPasteSearch, } from "react-icons/
 import { FaLocationDot } from "react-icons/fa6";
 import { FaCity, FaClipboardCheck } from "react-icons/fa";
 import { IoMdCheckmark } from "react-icons/io";
+import { Helmet } from "react-helmet-async";
 
 const Estates = () => {
     const estates = useLoaderData();
@@ -65,6 +66,9 @@ const Estates = () => {
                 </div>
 
             </div>
+            <Helmet>
+                <title>Urban Charm | Property</title>
+            </Helmet>
 
 
         </div>

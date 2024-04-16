@@ -13,3 +13,4 @@ Npm packages
 npm install react-icons --save
 npm install --save react-toastify
 npm install swiper
+npm i react-helmet-async

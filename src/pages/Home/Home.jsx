@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
 import EstateCards from "./EstateCards";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -11,6 +12,9 @@ const Home = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Urban Charm | Home</title>
+            </Helmet>
 
             <Banner></Banner>
             <div className="mt-10  text-center ">
