@@ -33,7 +33,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="flex items-center">
-                    <img className="w-14 lg:w-24" src="https://i.ibb.co/R0W5r98/Capture-removebg-preview.png" alt="" />
+                    <img className="w-14 lg:w-24" src="https://i.ibb.co/R0W5r98/Capture-removebg-preview.png" alt={user ? user.displayName : "User"} title={user ? user.displayName : "User"} />
                     <a className="btn font-bold text-indigo-800 btn-ghost lg:text-3xl">Urban<span className="text-lime-600">Charm</span></a>
 
                 </div>
@@ -47,8 +47,8 @@ const Navbar = () => {
                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                     {
                         user ?
-                            <div className="w-10 rounded-full">
-                                <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
+                            <div className="w-10 rounded-full" >
+                                <img alt="Tailwind CSS Navbar component" src={user.photoURL} title={user.displayName} />
                             </div> :
                             <div></div>
                     }
