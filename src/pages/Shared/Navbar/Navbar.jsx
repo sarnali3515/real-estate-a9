@@ -6,6 +6,7 @@ import './Navbar.css'
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
+    console.log(user)
 
     const handleSignOut = () => {
         logOut()
@@ -15,9 +16,9 @@ const Navbar = () => {
 
     const navLinks =
         <>
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/upProfile">Update Profile</NavLink></li>
-            <li><NavLink to="/profile">Profile</NavLink></li>
+            <li className="text-base font-medium"><NavLink to="/">Home</NavLink></li>
+            <li className="text-base font-medium"><NavLink to="/upProfile">Update Profile</NavLink></li>
+            <li className="text-base font-medium"><NavLink to="/profile">Profile</NavLink></li>
 
         </>
     return (
@@ -44,9 +45,13 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                    <div className="w-10 rounded-full">
-                        <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                    </div>
+                    {
+                        user ?
+                            <div className="w-10 rounded-full">
+                                <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
+                            </div> :
+                            <div></div>
+                    }
                 </div>
 
                 {

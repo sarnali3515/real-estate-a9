@@ -2,16 +2,17 @@ import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FaGoogle, FaGithub } from "react-icons/fa";
-import { GoogleAuthProvider } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 
 
 const Register = () => {
 
-    const { createUser, googlePopup } = useContext(AuthContext);
+    const { createUser, googlePopup, githubPopup } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
 
     const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
 
 
     const handleGoogleSignIn = () => {
@@ -25,19 +26,30 @@ const Register = () => {
             })
     }
 
+    const handleGithubSignIn = () => {
+        githubPopup(githubProvider)
+            .then(result => {
+                console.log(result);
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
+
     const handleRegister = e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
         const name = form.get('name');
-        const photo = form.get('photo');
+        const photoURL = form.get('photo');
         const email = form.get('email');
         const password = form.get('password');
-        console.log(name, photo, email, password);
+        console.log(name, photoURL, email, password);
 
         //create user
         createUser(email, password)
             .then(result => {
-                console.log(result.user)
+                console.log(result.user);
             })
             .catch(error => {
                 console.error(error)
@@ -97,7 +109,7 @@ const Register = () => {
                             <FaGoogle></FaGoogle>
                             Google
                         </button>
-                        <button className="btn  bg-black text-white">
+                        <button onClick={handleGithubSignIn} className="btn  bg-black text-white">
                             <FaGithub></FaGithub>
                             GitHub
                         </button>

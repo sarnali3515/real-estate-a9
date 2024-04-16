@@ -2,18 +2,33 @@ import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FaGoogle, FaGithub } from "react-icons/fa";
-import { GoogleAuthProvider } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
 
-    const { signIn, googlePopup } = useContext(AuthContext);
+    const { signIn, googlePopup, githubPopup } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
 
     const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
 
     const handleGoogleLogIn = () => {
         googlePopup(googleProvider)
+            .then(result => {
+                console.log(result);
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.error(error);
+
+            })
+    }
+    const handleGithubLogIn = () => {
+        githubPopup(githubProvider)
             .then(result => {
                 console.log(result);
                 navigate(location?.state ? location.state : '/')
@@ -34,10 +49,13 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 console.log(result.user);
-                navigate(location?.state ? location.state : '/')
+                toast('Login Successful')
+                navigate(location?.state ? location.state : '/');
+
             })
             .catch(error => {
-                console.error(error)
+                console.error(error);
+                toast(error.message);
             })
     }
     return (
@@ -82,14 +100,16 @@ const Login = () => {
                             <FaGoogle></FaGoogle>
                             Google
                         </button>
-                        <button className="btn btn-outline bg-black text-white">
+                        <button onClick={handleGithubLogIn} className="btn btn-outline bg-black text-white">
                             <FaGithub></FaGithub>
                             GitHub
                         </button>
                     </div>
                     <p className="mb-4 text-center">Dont have an account? <Link to="/register" className="text-blue-600 font-semibold">Register.</Link></p>
                 </div>
+
             </div>
+            <ToastContainer />
         </div>
     );
 };

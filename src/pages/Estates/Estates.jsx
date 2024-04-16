@@ -12,12 +12,12 @@ const Estates = () => {
 
     return (
         <div className=" bg-indigo-50">
-
+            <h1 className="flex items-center pt-5 px-3 md:px-5 lg:px-12  gap-4 text-xl md:text-2xl lg:text-3xl mb-8 font-bold "><FaCity></FaCity>{estate.estate_title}</h1>
             <div className="flex items-center justify-center px-6 lg:px-14">
-                <img src={estate.image_url} className="max-w-full my-4 rounded-lg shadow-2xl" />
+                <img src={estate.image_url} className="max-w-full mb-4 rounded-lg shadow-2xl" />
             </div>
-            <div className="px-3 md:px-5 lg:px-8 space-y-5">
-                <h1 className="flex items-center gap-4 text-xl md:text-2xl lg:text-3xl my-8 font-bold"><FaCity></FaCity>{estate.estate_title}</h1>
+            <div className="px-3 md:px-5 lg:px-12 mt-3 space-y-5">
+
                 <p className="font-bold flex items-center gap-2 text-lg lg:text-xl text-indigo-700"><MdOutlineDescription></MdOutlineDescription> Description </p>
                 <p className="">{estate.description}</p>
                 <p className="font-bold flex items-center gap-2 text-xl text-indigo-700"><FaLocationDot></FaLocationDot>Address </p>
