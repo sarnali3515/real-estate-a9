@@ -14,9 +14,7 @@ import 'swiper/swiper-bundle.css'
 
 const Banner = () => {
     return (
-        // <div>
 
-        // </div>
         <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={50}
@@ -24,7 +22,6 @@ const Banner = () => {
             navigation
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
-
 
         >
             <SwiperSlide>

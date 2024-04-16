@@ -5,7 +5,7 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { GithubAuthProvider, GoogleAuthProvider, updateProfile } from "firebase/auth";
 
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async";
 
@@ -27,9 +27,7 @@ const Register = () => {
             .then(result => {
                 console.log(result);
                 toast.success('Registration Successful!');
-                setTimeout(() => {
-                    navigate(location?.state ? location.state : '/');
-                }, 2000);
+                navigate(location?.state ? location.state : '/');
             })
             .catch(error => {
                 console.error(error);
@@ -60,7 +58,7 @@ const Register = () => {
         const email = form.get('email');
         const password = form.get('password');
 
-        // Password validation
+
         const uppercaseRegex = /[A-Z]/;
         const lowercaseRegex = /[a-z]/;
         const lengthRequirement = password.length >= 6;
@@ -80,7 +78,6 @@ const Register = () => {
             return;
         }
 
-
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
@@ -94,9 +91,7 @@ const Register = () => {
                     })
                     .catch()
                 toast.success('Registration Successful!');
-                setTimeout(() => {
-                    navigate(location?.state ? location.state : '/');
-                }, 2000);
+                navigate(location?.state ? location.state : '/');
 
             })
             .catch(error => {
@@ -107,12 +102,12 @@ const Register = () => {
     return (
         <div className="hero min-h-screen bg-base-200" style={{ backgroundImage: 'url(https://i.ibb.co/QMP9Bjc/max-okhrimenko-s0-Nd-YEWui-Y-unsplash.jpg)' }}>
             <div className="hero-content flex-col lg:flex-row hero-overlay bg-opacity-50">
-                <div className="text-center lg:m-8 lg:text-left">
+                <div data-aos="fade-right" className="text-center lg:m-8 lg:text-left">
                     <h1 className="text-3xl md:text-5xl font-semibold text-indigo-800 btn-ghost ">Urban <span className="text-lime-600">Charm</span></h1>
                     <h1 className="text-2xl md:text-3xl font-semibold text-white mt-5">Welcome to Urban Charm!</h1>
-                    <p className="py-6 md:pr-8 text-white">Unlock your dream home with just a click - log in to explore exclusive listings and personalized recommendations.</p>
+                    <p className="py-6 md:pr-8 text-white">Unlock your dream home with just a click - Register to explore exclusive listings and personalized recommendations.</p>
                 </div>
-                <div className="card w-full  shadow-2xl bg-indigo-100">
+                <div data-aos="fade-left" className="card w-full  shadow-2xl bg-indigo-100">
                     <h1 className="text-center font-bold text-4xl pt-2">Register</h1>
                     <form onSubmit={handleRegister} className="card-body">
                         <div className="form-control">
@@ -180,7 +175,7 @@ const Register = () => {
                 </div>
 
             </div>
-            <ToastContainer />
+            {/* <ToastContainer /> */}
             <Helmet>
                 <title>Urban Charm | Register</title>
             </Helmet>

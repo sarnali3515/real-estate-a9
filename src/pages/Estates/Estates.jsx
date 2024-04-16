@@ -12,7 +12,7 @@ const Estates = () => {
     const estate = estates.find(estate => estate.id == estateIdInt);
 
     return (
-        <div className=" bg-indigo-50">
+        <div data-aos="fade-right" className=" bg-indigo-50">
             <h1 className="flex items-center pt-5 px-3 md:px-5 lg:px-12  gap-4 text-xl md:text-2xl lg:text-3xl mb-8 font-bold "><FaCity></FaCity>{estate.estate_title}</h1>
             <div className="flex items-center justify-center px-6 lg:px-14">
                 <img src={estate.image_url} className="max-w-full mb-4 rounded-lg shadow-2xl" />

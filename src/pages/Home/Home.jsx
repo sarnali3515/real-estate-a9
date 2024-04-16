@@ -4,8 +4,6 @@ import EstateCards from "./EstateCards";
 import { Helmet } from "react-helmet-async";
 
 
-
-
 const Home = () => {
 
     const estates = useLoaderData();

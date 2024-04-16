@@ -19,7 +19,10 @@ const Navbar = () => {
             <li className="text-base font-medium"><NavLink to="/">Home</NavLink></li>
             <li className="text-base font-medium"><NavLink to="/upProfile">Update Profile</NavLink></li>
             <li className="text-base font-medium"><NavLink to="/profile">Profile</NavLink></li>
-            <li className="text-base font-medium"><NavLink to="/register">Register</NavLink></li>
+            {
+                !user &&
+                <li className="text-base font-medium"><NavLink to="/register">Register</NavLink></li>
+            }
 
         </>
     return (

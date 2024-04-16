@@ -12,7 +12,7 @@ const Profile = () => {
             <Helmet>
                 <title>Urban Charm | Profile</title>
             </Helmet>
-            <div className="bg-indigo-50">
+            <div data-aos="fade-up" className="bg-indigo-50">
                 <div className="flex items-center justify-center pt-10">
                     <div className="avatar">
                         <div className="w-36 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
