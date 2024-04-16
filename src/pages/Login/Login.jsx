@@ -20,10 +20,14 @@ const Login = () => {
         googlePopup(googleProvider)
             .then(result => {
                 console.log(result);
-                navigate(location?.state ? location.state : '/')
+                toast.success('Login Successful')
+                setTimeout(() => {
+                    navigate(location?.state ? location.state : '/');
+                }, 2000);
             })
             .catch(error => {
                 console.error(error);
+                toast.error('Incorrect Email or Password');
 
             })
     }
@@ -31,10 +35,14 @@ const Login = () => {
         githubPopup(githubProvider)
             .then(result => {
                 console.log(result);
-                navigate(location?.state ? location.state : '/')
+                toast.success('Login Successful')
+                setTimeout(() => {
+                    navigate(location?.state ? location.state : '/');
+                }, 2000);
             })
             .catch(error => {
-                console.error(error)
+                console.error(error);
+                toast.error('Incorrect Email or Password');
             })
     }
 
@@ -49,13 +57,15 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 console.log(result.user);
-                toast('Login Successful')
-                navigate(location?.state ? location.state : '/');
+                toast.success('Login Successful')
+                setTimeout(() => {
+                    navigate(location?.state ? location.state : '/');
+                }, 2000);
 
             })
             .catch(error => {
                 console.error(error);
-                toast(error.message);
+                toast.error('Incorrect Email or Password');
             })
     }
     return (

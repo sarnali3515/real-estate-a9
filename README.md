@@ -12,3 +12,4 @@ Currently, two official plugins are available:
 Npm packages
 npm install react-icons --save
 npm install --save react-toastify
+npm install swiper

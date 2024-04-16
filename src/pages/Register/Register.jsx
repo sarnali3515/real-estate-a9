@@ -2,7 +2,10 @@ import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FaGoogle, FaGithub } from "react-icons/fa";
-import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, updateProfile } from "firebase/auth";
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Register = () => {
@@ -19,10 +22,14 @@ const Register = () => {
         googlePopup(googleProvider)
             .then(result => {
                 console.log(result);
-                navigate(location?.state ? location.state : '/')
+                toast.success('Registration Successful!');
+                setTimeout(() => {
+                    navigate(location?.state ? location.state : '/');
+                }, 2000);
             })
             .catch(error => {
-                console.error(error)
+                console.error(error);
+                toast.error('Registration Failed!')
             })
     }
 
@@ -30,10 +37,14 @@ const Register = () => {
         githubPopup(githubProvider)
             .then(result => {
                 console.log(result);
-                navigate(location?.state ? location.state : '/')
+                toast.success('Registration Successful!');
+                setTimeout(() => {
+                    navigate(location?.state ? location.state : '/');
+                }, 2000);
             })
             .catch(error => {
-                console.error(error)
+                console.error(error);
+                toast.error('Registration Failed!')
             })
     }
 
@@ -44,16 +55,50 @@ const Register = () => {
         const photoURL = form.get('photo');
         const email = form.get('email');
         const password = form.get('password');
-        console.log(name, photoURL, email, password);
 
-        //create user
+        // Password validation
+        const uppercaseRegex = /[A-Z]/;
+        const lowercaseRegex = /[a-z]/;
+        const lengthRequirement = password.length >= 6;
+
+        if (!uppercaseRegex.test(password)) {
+            toast.error('Password must contain at least one uppercase letter.');
+            return;
+        }
+
+        if (!lowercaseRegex.test(password)) {
+            toast.error('Password must contain at least one lowercase letter.');
+            return;
+        }
+
+        if (!lengthRequirement) {
+            toast.error('Password must be at least 6 characters long.');
+            return;
+        }
+
+
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
+                //update
+                updateProfile(result.user, {
+                    displayName: name,
+                    photoURL: photoURL
+                })
+                    .then(() => {
+                        console.log('profile updated')
+                    })
+                    .catch()
+                toast.success('Registration Successful!');
+                setTimeout(() => {
+                    navigate(location?.state ? location.state : '/');
+                }, 2000);
+
             })
             .catch(error => {
-                console.error(error)
-            })
+                console.error(error);
+                toast.error('Registration Failed!')
+            });
     }
     return (
         <div className="hero min-h-screen bg-base-200" style={{ backgroundImage: 'url(https://i.ibb.co/QMP9Bjc/max-okhrimenko-s0-Nd-YEWui-Y-unsplash.jpg)' }}>
@@ -118,6 +163,7 @@ const Register = () => {
                 </div>
 
             </div>
+            <ToastContainer />
         </div>
     );
 };
