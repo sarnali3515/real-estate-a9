@@ -1,12 +1,12 @@
 
-
+import 'animate.css'
 const Agents = () => {
     return (
         <div>
 
             <div className="mt-6 mb-2  text-center ">
-                <h2 className="font-bold text-3xl">Meet All Our Agents</h2>
-                <p className="px-10 md:px-28">Our partnered agents play a pivotal role in our network, bringing their expertise and properties to our platform. Collaborating closely with these professionals, we ensure a seamless experience for buyers and renters.</p>
+                <h2 className="font-bold text-3xl animate__animated animate__rubberBand">Meet All Our Agents</h2>
+                <p className="px-10 md:px-28 animate__animated animate__flash">Our partnered agents play a pivotal role in our network, bringing their expertise and properties to our platform. Collaborating closely with these professionals, we ensure a seamless experience for buyers and renters.</p>
             </div>
             <div className="py-10 grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {/* card-1 */}

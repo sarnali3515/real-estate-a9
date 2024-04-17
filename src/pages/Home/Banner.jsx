@@ -1,15 +1,8 @@
 
-
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import 'swiper/swiper-bundle.css'
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-// import 'swiper/css/scrollbar';
-
-
+import 'animate.css'
 
 
 const Banner = () => {
@@ -29,7 +22,7 @@ const Banner = () => {
                     <div className="hero-overlay rounded-lg bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="max-w-lg">
-                            <h1 className="mb-5 text-5xl font-bold">Discover Your Dream Home with Urban Charm</h1>
+                            <h1 className="mb-5 text-5xl font-bold animate__animated animate__shakeX">Discover Your Dream Home with Urban Charm</h1>
                             <p className="mb-5">Find the perfect place to call home with our comprehensive selection of residential properties. Explore listings ranging from cozy family homes to luxurious urban retreats, each offering unique features and amenities</p>
                             <button className="btn bg-lime-700 text-white font-semibold">Explore Properties</button>
                         </div>
@@ -42,7 +35,7 @@ const Banner = () => {
                     <div className="hero-overlay rounded-lg bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="max-w-lg">
-                            <h1 className="mb-5 text-5xl font-bold">Discover Your Dream Home with Urban Charm</h1>
+                            <h1 className="mb-5 text-5xl font-bold animate__animated animate__shakeX">Discover Your Dream Home with Urban Charm</h1>
                             <p className="mb-5">Find the perfect place to call home with our comprehensive selection of residential properties. Explore listings ranging from cozy family homes to luxurious urban retreats, each offering unique features and amenities</p>
                             <button className="btn bg-lime-700 text-white font-semibold">Explore Properties</button>
                         </div>
@@ -55,7 +48,7 @@ const Banner = () => {
                     <div className="hero-overlay rounded-lg bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="max-w-lg">
-                            <h1 className="mb-5 text-5xl font-bold">Discover Your Dream Home with Urban Charm</h1>
+                            <h1 className="mb-5 text-5xl font-bold animate__animated animate__shakeX">Discover Your Dream Home with Urban Charm</h1>
                             <p className="mb-5">Find the perfect place to call home with our comprehensive selection of residential properties. Explore listings ranging from cozy family homes to luxurious urban retreats, each offering unique features and amenities</p>
                             <button className="btn bg-lime-700 text-white font-semibold">Explore Properties</button>
                         </div>
@@ -68,7 +61,7 @@ const Banner = () => {
                     <div className="hero-overlay rounded-lg bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="max-w-lg">
-                            <h1 className="mb-5 text-5xl font-bold">Discover Your Dream Home with Urban Charm</h1>
+                            <h1 className="mb-5 text-5xl font-bold animate__animated animate__shakeX">Discover Your Dream Home with Urban Charm</h1>
                             <p className="mb-5">Find the perfect place to call home with our comprehensive selection of residential properties. Explore listings ranging from cozy family homes to luxurious urban retreats, each offering unique features and amenities</p>
                             <button className="btn bg-lime-700 text-white font-semibold">Explore Properties</button>
                         </div>

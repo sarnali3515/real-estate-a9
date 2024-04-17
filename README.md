@@ -1,19 +1,37 @@
-# React + Vite
+# Name: 
+Urban Charm
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Live Site Link: https://assignment-9-real-estate-c9a0b.web.app/
 
-Currently, two official plugins are available:
+# Features
+- Responsive navbar with active routes and conditional user profile display.
+- Login page with email/password authentication and social media login options.
+- Registration page with password strength verification and error handling.
+- Banner section featuring a slider with captivating property images.
+- Footer with essential information and visually appealing design.
+- Estate section showcasing properties in the chosen category with detailed descriptions and facilities.
+- Estate details page for viewing specific property information, with authentication to access.
+- 404 page for handling non-existent routes.
+- Extra route for Agents of properties, accessible only to authenticated users.
+- Dynamic title for each page.
+- Persistent user information in the navbar using Firebase's onAuthStateChanged method.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Technologies Used
+- HTML
+- CSS, Tailwind, Daisy
+- JavaScript
+- React
+- React Router
+- LocalStorage
+- Firebase
 
-
-
-# Npm packages
-- npm install react-icons --save
-- npm install --save react-toastify
-- npm install swiper
-- npm i react-helmet-async
-- npm install prop-types
-- npm install aos --save
+# Npm packages Used
+- react-icons
+- react-toastify
+- react-helmet-async
+- prop-types
+- swiper
+- Aos package
+- react-leaflet
+- Animate.css
 

@@ -2,6 +2,8 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
 import EstateCards from "./EstateCards";
 import { Helmet } from "react-helmet-async";
+import Maps from "./Maps";
+import 'animate.css';
 
 
 const Home = () => {
@@ -15,8 +17,8 @@ const Home = () => {
             </Helmet>
             {/* <div className="py-10"></div> */}
             <Banner></Banner>
-            <div className="mt-10  text-center ">
-                <h2 className="font-bold text-3xl">Explore All the Estates</h2>
+            <div className="mt-10  text-center">
+                <h2 className="font-bold text-3xl animate__animated animate__bounce">Explore All the Estates</h2>
                 <p className="px-10 md:px-28">Explore our diverse range of residential treasures, from cozy family homes to luxurious urban retreats. Each property offers unique features and amenities, ensuring there is something for every lifestyle.</p>
             </div>
 
@@ -28,7 +30,13 @@ const Home = () => {
                     ></EstateCards>)
                 }
             </div>
+            <div className="p-10 my-8">
+                <div className="mt-10 text-center">
+                    <h2 className="font-bold text-3xl pb-6">Find Us on Google Map</h2>
 
+                </div>
+                <Maps></Maps>
+            </div>
         </div>
     );
 };

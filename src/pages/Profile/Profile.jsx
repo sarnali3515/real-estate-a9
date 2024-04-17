@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../../providers/AuthProvider";
 import { MdEmail } from "react-icons/md";
+import 'animate.css'
 
 const Profile = () => {
 
@@ -21,7 +22,7 @@ const Profile = () => {
                     </div>
                 </div>
                 <div className="text-center py-10">
-                    <h2 className="text-3xl pb-3 font-bold"><span className=" font-bold"></span> {user.displayName}</h2>
+                    <h2 className="text-3xl pb-3 font-bold animate__animated animate__pulse"><span className=" font-bold"></span> {user.displayName}</h2>
                     <h3 className="text-xl flex justify-center items-center gap-2"><span className="text-2xl"><MdEmail></MdEmail></span>{user.email}</h3>
                 </div>
             </div>
