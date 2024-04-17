@@ -30,9 +30,9 @@ const Home = () => {
                     ></EstateCards>)
                 }
             </div>
-            <div className="p-10 my-8">
-                <div className="mt-10 text-center">
-                    <h2 className="font-bold text-3xl pb-6">Find Us on Google Map</h2>
+            <div className="p-5 lg:p-10 my-4 lg:my-8">
+                <div className="text-center">
+                    <h2 className="font-bold text-3xl pb-4 md:pb-6">Find Us on Google Map</h2>
 
                 </div>
                 <Maps></Maps>
