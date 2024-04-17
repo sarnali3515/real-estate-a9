@@ -23,7 +23,11 @@ const EstateCards = ({ estate }) => {
                 <img src={image_url} alt="Shoes" />
             </figure>
 
-            <div className="badge text-xl p-3 text-white bg-indigo-800">{segment_name}</div>
+            <div className="flex justify-between">
+
+                <div className="badge text-xl p-3 text-white bg-indigo-800">{segment_name}</div>
+                <p className="font-medium pr-2 bg-white">Property ID: {id}</p>
+            </div>
 
             <div className="card-body">
                 <h2 className="card-title">{estate_title}</h2>

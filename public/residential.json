@@ -2,7 +2,7 @@
     {
         "id": 1,
         "estate_title": "Spacious Family Home with Garden",
-        "segment_name": "Residential",
+        "segment_name": "Single-family homes",
         "description": "Welcome to this spacious family home nestled in a serene neighborhood. This charming property features ample living space spread across two floors, including four bedrooms, three bathrooms, a cozy living room with a fireplace, and a fully equipped kitchen with modern appliances. Step outside to discover the beautifully landscaped garden, perfect for outdoor gatherings and playtime with the kids. Conveniently located near top-rated schools, parks, and shopping centers, this home offers the ideal blend of comfort, convenience, and tranquility.",
         "price": "$450,000",
         "status": "sale",
@@ -18,7 +18,7 @@
     {
         "id": 2,
         "estate_title": "Luxurious Downtown Apartment",
-        "segment_name": "Residential",
+        "segment_name": "Apartments",
         "description": "Indulge in luxury living at this stunning downtown apartment. Boasting panoramic views of the city skyline, this modern residence features high-end finishes and designer touches throughout. The open-concept living area is perfect for entertaining, while the gourmet kitchen is a chef's dream come true. Retreat to the spacious master suite with a luxurious ensuite bathroom and walk-in closet. Residents also enjoy access to a range of upscale amenities, including a rooftop pool, fitness center, and concierge service. Experience the ultimate urban lifestyle in the heart of the city.",
         "price": "$3,500/month",
         "status": "rent",
@@ -34,7 +34,7 @@
     {
         "id": 3,
         "estate_title": "Cozy Suburban Retreat",
-        "segment_name": "Residential",
+        "segment_name": "Single-family homes",
         "description": "Escape to this cozy suburban retreat nestled amidst lush greenery and tranquility. This inviting home offers a warm and welcoming ambiance, with spacious interiors flooded with natural light. The main level features a comfortable living room, a formal dining area, and a well-appointed kitchen with stainless steel appliances. Upstairs, you'll find three bedrooms, including a serene master suite with a private balcony overlooking the backyard. Step outside to discover the expansive deck and beautifully landscaped yard, perfect for outdoor entertaining and relaxation. With its peaceful surroundings and convenient location, this home offers the perfect blend of comfort and convenience.",
         "price": "$300,000",
         "status": "sale",
@@ -50,7 +50,7 @@
     {
         "id": 4,
         "estate_title": "Modern Urban Loft",
-        "segment_name": "Residential",
+        "segment_name": "Apartments",
         "description": "Experience loft living at its finest in this sleek and stylish urban residence. Located in a vibrant neighborhood, this loft offers an open-concept layout with soaring ceilings and industrial-chic design elements. The spacious living area is ideal for entertaining, while the gourmet kitchen features high-end appliances and sleek countertops. Retire to the tranquil bedroom area, complete with a luxurious ensuite bathroom and ample closet space. Residents also enjoy access to a communal rooftop terrace with panoramic city views. With its modern aesthetic and prime location, this loft is the epitome of urban luxury.",
         "price": "$4,000/month",
         "status": "rent",
@@ -66,7 +66,7 @@
     {
         "id": 5,
         "estate_title": "Family-Friendly Townhouse",
-        "segment_name": "Residential",
+        "segment_name": "Townhouses",
         "description": "Welcome to this inviting townhouse designed for modern family living. Spread across two levels, this home offers plenty of space for relaxation and entertainment. The main floor features a bright and airy living room, a modern kitchen with stainless steel appliances, and a dining area overlooking the private backyard. Upstairs, you'll find three bedrooms, including a spacious master suite with a walk-in closet and ensuite bathroom. Step outside to enjoy the fenced backyard, perfect for children and pets to play safely. With its family-friendly layout and convenient location near schools and parks, this townhouse is sure to impress.",
         "price": "$250,000",
         "status": "sale",
@@ -82,7 +82,7 @@
     {
         "id": 6,
         "estate_title": "Scenic Mountain Retreat",
-        "segment_name": "Residential",
+        "segment_name": "Vacation rentals",
         "description": "Escape to this picturesque mountain retreat nestled in the heart of nature. Surrounded by towering pine trees and breathtaking views, this cozy cabin offers the perfect getaway from the hustle and bustle of city life. The main level features a rustic living area with a stone fireplace, a fully equipped kitchen, and a charming dining area. Upstairs, you'll find two bedrooms, each with its own ensuite bathroom, providing plenty of space for family and guests. Step outside to the expansive deck and soak in the tranquility of the mountains. With its serene surroundings and close proximity to hiking trails and outdoor activities, this cabin is an outdoor enthusiast's dream.",
         "price": "$350,000",
         "status": "sale",
@@ -98,7 +98,7 @@
     {
         "id": 7,
         "estate_title": "Elegant Lakeside Cottage",
-        "segment_name": "Residential",
+        "segment_name": "Vacation rentals",
         "description": "Discover lakeside living at its finest in this elegant cottage overlooking the water. With its charming exterior and tastefully appointed interiors, this home exudes warmth and sophistication. The main floor features a spacious living room with panoramic views of the lake, a gourmet kitchen with granite countertops, and a cozy dining area perfect for family meals. Upstairs, you'll find three bedrooms, including a luxurious master suite with a private balcony and ensuite bathroom. Step outside to the beautifully landscaped yard and enjoy direct access to the lake for swimming, boating, and fishing. With its serene setting and upscale amenities, this cottage offers the ultimate lakefront lifestyle.",
         "price": "$500,000",
         "status": "sale",
@@ -114,7 +114,7 @@
     {
         "id": 8,
         "estate_title": "Tranquil Beach House",
-        "segment_name": "Residential",
+        "segment_name": "Vacation rentals",
         "description": "Experience coastal living at its best in this tranquil beach house located just steps from the ocean. With its bright and airy interiors and stunning ocean views, this home offers the perfect blend of comfort and luxury. The main level features an open-concept living area with vaulted ceilings, a gourmet kitchen with granite countertops, and a dining area overlooking the water. Upstairs, you'll find three bedrooms, including a spacious master suite with a private balcony and ensuite bathroom. Step outside to the expansive deck and enjoy panoramic views of the coastline. With its prime beachfront location and upscale amenities, this beach house is the ultimate seaside retreat.",
         "price": "$750,000",
         "status": "sale",
@@ -130,7 +130,7 @@
     {
         "id": 9,
         "estate_title": "Country Farmhouse with Acreage",
-        "segment_name": "Residential",
+        "segment_name": "Single-family homes",
         "description": "Embrace the tranquility of country living in this charming farmhouse set on sprawling acreage. Surrounded by lush green fields and rolling hills, this property offers a peaceful retreat from city life. The farmhouse features a spacious living room with a cozy fireplace, a country-style kitchen with farmhouse sink and butcher block countertops, and a bright dining area overlooking the scenic countryside. Upstairs, you'll find three bedrooms, each with its own unique character and charm. Step outside to explore the expansive grounds, which include a barn, pastureland, and vegetable garden. With its rustic charm and idyllic setting, this farmhouse is the perfect place to call home.",
         "price": "$600,000",
         "status": "sale",

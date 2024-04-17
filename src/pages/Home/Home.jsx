@@ -13,7 +13,7 @@ const Home = () => {
             <Helmet>
                 <title>Urban Charm | Home</title>
             </Helmet>
-
+            {/* <div className="py-10"></div> */}
             <Banner></Banner>
             <div className="mt-10  text-center ">
                 <h2 className="font-bold text-3xl">Explore All the Estates</h2>
